@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORK — Niyan Ali</title>
+<link rel="icon" type="image/png" href="assets/nafavicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+      colors: {
+        neon: { orange: '#FF4F30', orangeHover: '#FF6A4D' },
+        silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+        dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay">
+
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/85 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-sm tracking-tighter">NA</div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/5 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Contact</a>
+  </div>
+</nav>
+
+
+
+
+
+<!-- PAGE HEADER -->
+<section class="pt-28 pb-12 border-b border-white/5 relative">
+  <div class="absolute left-0 top-0 bottom-0 w-[32px] film-strip opacity-30 hidden lg:block"></div>
+  <div class="max-w-full mx-auto px-5">
+    <div style="animation: slideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-8 h-[1px] bg-neon-orange"></div>
+        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Full Portfolio</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-white">WORK</h1>
+      <p class="text-sm text-silver-mid mt-3 max-w-full">Every project is a piece of my journey. From Zema Studios beginnings to working with production houses across Addis Ababa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER + GRID -->
+<section class="py-12">
+  <div class="max-w-full mx-auto px-5">
+    <div class="reveal flex flex-wrap gap-2 mb-8">
+      <button class="category-btn active border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase" data-cat="all">All Projects</button>
+      <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="film">Short Films</button>
+      <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="podcast">Podcasts</button>
+      <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="commercial">Commercial</button>
+      <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="music">Music / Other</button>
+    </div>
+
+    <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <!-- Card 1 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="narrative" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/one_click_poster_main.png" alt="One Click" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Narrative Short</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">ONE CLICK</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Creating this was an incredible learning experience, and taking home 5th place nationwide in our very first festival outing was a huge milestone for the team. Huge thanks to the cast and crew who helped bring this vision to life!</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">4 Minutes</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Award Winner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" style="transition-delay:0.1s" data-youtube="https://youtu.be/dQD5dMl6OXw">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/alsam_properties_thumbnail.png" alt="Nike Untamed" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Commercial</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">NIKE — UNTAMED</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Global campaign celebrating raw athletic movement. Shot across 3 continents in 14 days. 60sec · 2024</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">2.4M Views</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Cannes Lions Shortlist</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="documentary" style="transition-delay:0.2s" data-youtube="https://youtu.be/soADx_O6ezM">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/joel_talargie.jpg" alt="Between the Lines" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">Documentary</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">BETWEEN THE LINES</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Intimate portrait of street poets in Mumbai finding voice through verse. 42min · 2023</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Tribeca '23</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Official Selection</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="music" data-youtube="https://youtu.be/G0I2ZGQdN38">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/YD_Took_her_to-Jemo.jpg" alt="Echoes" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Music Video</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">ECHOES — "VOID"</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">One-take visual experiment in abandoned warehouse. Practical effects only. 4min · 2024</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">890K Views</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">MTV Push</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="narrative" style="transition-delay:0.1s" data-youtube="https://www.youtube.com/@DesignPlusThoughtPodcast">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/design+thought_podcast.png" alt="Corridor" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Podcast</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">CORRIDOR</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Two strangers. One hallway. A conversation that unravels everything. Single location thriller. 12min · 2023</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">SXSW '23</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Audience Award</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" style="transition-delay:0.2s" data-youtube="https://youtu.be/K5f1t6s4YV4">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/FinWise Ethiopia - Last-mile Capital for Inclusive Growth in Ethiopia.png" alt="Sony Alpha" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Commercial</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">SONY ALPHA — SEE MORE</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Product launch film for α7R V. Macro + landscape showcase. 90sec · 2023</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">1.1M Views</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">One Show Merit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder Cards -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="film" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-1/800/600.jpg" alt="Placeholder 1" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 1</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Thumbnail and YouTube link to be added later. Placeholder content for the upcoming release.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-2/800/600.jpg" alt="Placeholder 2" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 2</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Placeholder card for future commercial projects. Link and thumbnail to be updated.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="music" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-3/800/600.jpg" alt="Placeholder 3" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 3</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Placeholder card for upcoming music-video or visual project. Replace with actual content later.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="film" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-4/800/600.jpg" alt="Placeholder 4" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 4</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Reserved for new frame-driven storytelling projects. Thumbnail and link will be added.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-5/800/600.jpg" alt="Placeholder 5" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 5</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Reserved for future commercial launches. Content to be updated when links are ready.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="music" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-6/800/600.jpg" alt="Placeholder 6" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 6</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Adding more music and visual projects soon. Replace this placeholder when ready.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="film" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-7/800/600.jpg" alt="Placeholder 7" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 7</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Placeholder for an upcoming cinematic story. Thumbnail and link to be provided later.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-8/800/600.jpg" alt="Placeholder 8" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 8</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Placeholder for a future campaign. Link and thumbnail can be updated once available.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="music" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-9/800/600.jpg" alt="Placeholder 9" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 9</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Placeholder for another upcoming music or visual release. Ready for thumbnail replacement.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal portfolio-card group cursor-pointer" data-category="film" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="https://picsum.photos/seed/placeholder-10/800/600.jpg" alt="Placeholder 10" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">Future Release</div>
+          <div class="absolute top-3 right-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">TBD</div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">FUTURE RELEASE 10</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Final placeholder card ready for future updates. Link and thumbnail can be swapped in later.</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Coming Soon</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">TBD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watch More Button -->
+    <div class="flex justify-center mt-12">
+      <a href="https://youtube.com/playlist?list=PL7ii0RPYq08WomPG4-mkNK8OGmwxPJlWn&si=PEp4cAOGkgUZ4uCh" id="watchMoreBtn" class="cta-btn flex items-center gap-2 border border-neon-orange bg-transparent text-neon-orange px-8 py-3.5 text-sm font-bold tracking-wider uppercase hover:bg-neon-orange hover:text-dark-900 transition-all">
+        Watch More on YouTube
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+        <span class="text-[10px] text-silver-dark ml-2">© 2025</span>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">ZEMA STUDIOS · ADDIS ABABA, ETH</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- YouTube Configuration -->
+<script>
+// YouTube Playlist URL - UPDATE THIS WITH YOUR ACTUAL YOUTUBE PLAYLIST
+const youtubePlaylistUrl = 'https://youtube.com/playlist?list=PL7ii0RPYq08WomPG4-mkNK8OGmwxPJlWn&si=PEp4cAOGkgUZ4uCh';
+
+// YouTube video URLs for each portfolio card (Update with your actual links)
+const youtubeLinks = {
+  0: '', // ONE CLICK
+  1: 'https://youtu.be/dQD5dMl6OXw', // NIKE — UNTAMED
+  2: 'https://youtu.be/soADx_O6ezM', // BETWEEN THE LINES
+  3: 'https://youtu.be/G0I2ZGQdN38', // ECHOES — "VOID"
+  4: 'https://www.youtube.com/@DesignPlusThoughtPodcast', // CORRIDOR
+  5: 'https://youtu.be/K5f1t6s4YV4'  // SONY ALPHA — SEE MORE
+};
+
+// Portfolio card click handlers for YouTube
+document.querySelectorAll('.portfolio-card[data-youtube]').forEach((card, index) => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    const videoUrl = youtubeLinks[index];
+    if (videoUrl) {
+      window.open(videoUrl, '_blank');
+    } else {
+      alert('YouTube link not configured for this video yet.');
+    }
+  });
+});
+
+// Watch More button
+const watchMoreBtn = document.getElementById('watchMoreBtn');
+if (watchMoreBtn) {
+  watchMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (youtubePlaylistUrl !== 'https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID') {
+      window.open(youtubePlaylistUrl, '_blank');
+    } else {
+      alert('YouTube playlist URL not configured yet.');
+    }
+  });
+}
+
+// Reinitialize Lucide icons after adding elements
+if (typeof lucide !== 'undefined') {
+  lucide.createIcons();
+}
+</script>
+</html>
+

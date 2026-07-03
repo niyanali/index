@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIYAN ALI — Filmmaker</title>
+<link rel="icon" type="image/png" href="assets/NA.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+      colors: {
+        neon: { orange: '#FF4F30', orangeHover: '#FF6A4D', orangeDark: '#CC3F26' },
+        silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+        dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay scanline-overlay">
+
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/85 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/NA.png" alt="NIYAN ALI" class="w-9 h-9 rounded-sm object-cover">
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/5 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Contact</a>
+  </div>
+</nav>
+
+
+
+
+
+<!-- HERO SECTION -->
+<section class="relative min-h-screen flex items-end pb-12 pt-24 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="assets/hero-bg.jpg" alt="Cinematic shot" class="w-full h-full object-cover object-center opacity-40" style="filter: grayscale(100%) contrast(1.3) brightness(0.6);">
+    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-dark-900/80 via-transparent to-dark-900/40"></div>
+  </div>
+
+  <!-- Film Strip Left -->
+  <div class="absolute left-0 top-0 bottom-0 w-[32px] film-strip opacity-30 hidden lg:block"></div>
+
+  <!-- Timecode Overlay -->
+  <div class="absolute top-28 right-8 text-right hidden lg:block" style="animation: fadeIn 1.5s ease-out 0.5s both;">
+    <div class="text-[10px] font-mono text-neon-orange tracking-widest">REC ● 00:04:09:01</div>
+    <div class="text-[10px] font-mono text-silver-dark tracking-widest mt-1">24FPS · S-LOG3 · 4K</div>
+  </div>
+
+  <div class="relative max-w-full mx-auto px-5 w-full">
+    <div class="grid lg:grid-cols-12 gap-6 items-end">
+      <!-- Left: Main Statement -->
+      <div class="lg:col-span-8 space-y-4" style="animation: slideUp 1s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-8 h-[1px] bg-neon-orange"></div>
+          <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Solo Filmmaker · Director · DP</span>
+        </div>
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white">
+          DARE TO LOOK<br>
+          <span class="text-stroke">CLOSELY?</span><br>
+          THIS IS PURE <span class="text-neon-orange">CINEMA</span>
+        </h1>
+        <p class="text-sm md:text-base text-silver-mid font-light max-w-full leading-relaxed mt-3">
+          Stories aren't meant to be watched but they are meant to be felt. Obsessed with the craft, driven by raw instinct and powered by Coffee. This is visual storytelling stripped down to its absolute, pick experience.  <span class="text-white font-medium">Every frame is a confession. Every cut is a heartbeat.</span>
+        </p>
+        <div class="flex flex-wrap items-center gap-4 pt-3">
+          <a href="#work" class="cta-btn bg-neon-orange text-dark-900 px-8 py-3.5 text-xs font-bold tracking-wider uppercase inline-flex items-center gap-2 hover:bg-neon-orangeHover">
+            View My Work <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="#showreel" class="border border-white/20 text-white px-8 py-3.5 text-xs font-bold tracking-wider uppercase hover:border-neon-orange hover:text-neon-orange transition-all inline-flex items-center gap-2">
+            <i data-lucide="play" class="w-3.5 h-3.5"></i> Watch Showreel
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Quick Stats -->
+      <div class="lg:col-span-4 space-y-3" style="animation: slideUp 1s cubic-bezier(0.16,1,0.3,1) 0.6s both;">
+        <div class="stat-card bg-dark-700/60 backdrop-blur-sm p-4 pl-5">
+          <div class="text-3xl font-black text-white tracking-tight">64 <span class="text-neon-orange">+</span></div>
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase text-silver-dark mt-0.5">Projects Delivered</div>
+        </div>
+        <div class="stat-card bg-dark-700/60 backdrop-blur-sm p-4 pl-5">
+          <div class="text-3xl font-black text-white tracking-tight">8+ <span class="text-neon-orange">Years</span></div>
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase text-silver-dark mt-0.5">Behind the Lens</div>
+        </div>
+        <div class="stat-card bg-dark-700/60 backdrop-blur-sm p-4 pl-5">
+          <div class="text-3xl font-black text-white tracking-tight">1 <span class="text-neon-orange">x</span></div>
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase text-silver-dark mt-0.5">National Nominee</div>
+        </div>
+        <div class="stat-card bg-dark-700/60 backdrop-blur-sm p-4 pl-5">
+          <div class="text-3xl font-black text-white tracking-tight">100K <span class="text-neon-orange">+</span></div>
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase text-silver-dark mt-0.5">Views Generated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5" style="animation: fadeIn 2s ease-out 1.5s both;">
+    <span class="text-[9px] tracking-[0.3em] uppercase text-silver-dark">Scroll</span>
+    <div class="w-[1px] h-8 bg-gradient-to-b from-neon-orange to-transparent animate-pulse"></div>
+  </div>
+</section>
+
+<!-- SHOWREEL SECTION -->
+<section id="showreel" class="py-12">
+  <div class="max-w-full mx-auto px-5">
+    <div class="bg-dark-900/90 overflow-hidden">
+      <div class="relative aspect-video bg-black">
+        <button id="showreelPlaceholder" type="button" class="relative w-full h-full overflow-hidden bg-black">
+          <img src="assets/Vincero-x-Sam-Newton-Commercial-ft-Karl.png" alt="Showreel thumbnail" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="flex items-center justify-center w-20 h-20 rounded-full bg-white/10 border border-white/20 transition hover:bg-white/20">
+              <i data-lucide="play" class="w-10 h-10 text-white"></i>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE CLIENTS -->
+<div class="border-y border-white/5 py-3 overflow-hidden bg-dark-800/50">
+  <div class="marquee-track">
+    <span class="flex items-center gap-10 px-5 text-[11px] font-bold tracking-[0.2em] uppercase text-silver-dark whitespace-nowrap">
+      <span>Netflix</span><span class="text-neon-orange">✦</span>
+      <span>Apple TV+</span><span class="text-neon-orange">✦</span>
+      <span>Nike</span><span class="text-neon-orange">✦</span>
+      <span>Adobe</span><span class="text-neon-orange">✦</span>
+      <span>Sony Pictures</span><span class="text-neon-orange">✦</span>
+      <span>Red Bull</span><span class="text-neon-orange">✦</span>
+      <span>Vogue</span><span class="text-neon-orange">✦</span>
+      <span>A24</span><span class="text-neon-orange">✦</span>
+      <span>HBO</span><span class="text-neon-orange">✦</span>
+      <span>Samsung</span><span class="text-neon-orange">✦</span>
+    </span>
+    <span class="flex items-center gap-10 px-5 text-[11px] font-bold tracking-[0.2em] uppercase text-silver-dark whitespace-nowrap">
+      <span>Netflix</span><span class="text-neon-orange">✦</span>
+      <span>Apple TV+</span><span class="text-neon-orange">✦</span>
+      <span>Nike</span><span class="text-neon-orange">✦</span>
+      <span>Adobe</span><span class="text-neon-orange">✦</span>
+      <span>Sony Pictures</span><span class="text-neon-orange">✦</span>
+      <span>Red Bull</span><span class="text-neon-orange">✦</span>
+      <span>Vogue</span><span class="text-neon-orange">✦</span>
+      <span>A24</span><span class="text-neon-orange">✦</span>
+      <span>HBO</span><span class="text-neon-orange">✦</span>
+      <span>Samsung</span><span class="text-neon-orange">✦</span>
+    </span>
+  </div>
+</div>
+
+<!-- PORTFOLIO / WORK SECTION -->
+<section id="work" class="py-16 md:py-20">
+  <div class="max-w-full mx-auto px-5">
+    <!-- Section Header -->
+    <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+      <div>
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-8 h-[1px] bg-neon-orange"></div>
+          <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Selected Work</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tighter text-white">FILMGRAPHY</h2>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <button class="category-btn active border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase" data-cat="all">All</button>
+        <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="narrative">Narrative</button>
+        <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="documentary">Documentary</button>
+        <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="commercial">Commercial</button>
+        <button class="category-btn border border-white/10 px-4 py-2 text-[10px] font-bold tracking-[0.15em] uppercase text-silver-mid" data-cat="music">Music Video</button>
+      </div>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Card 1 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="narrative" data-youtube="">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/one_click_poster_main.png" alt="One Click" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Narrative Short</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">ONE CLICK</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Creating this was an incredible learning experience, and taking home 5th place nationwide in our very first festival outing was a huge milestone for the team. Huge thanks to the cast and crew who helped bring this vision to life!</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">4 Minutes</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Award Winner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" style="transition-delay: 0.1s;" data-youtube="https://youtu.be/dQD5dMl6OXw">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/alsam_properties_thumbnail.png" alt="Nike Untamed" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Commercial</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">NIKE — UNTAMED</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Global campaign celebrating raw athletic movement. Shot across 3 continents in 14 days. 60sec · 2024</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">2.4M Views</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Cannes Lions Shortlist</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="documentary" style="transition-delay: 0.2s;" data-youtube="https://youtu.be/soADx_O6ezM">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/joel_talargie.jpg" alt="Between the Lines" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-dark-900/80 text-white text-[9px] font-bold tracking-wider uppercase px-2.5 py-1 border border-white/20">Documentary</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">BETWEEN THE LINES</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Intimate portrait of street poets in Mumbai finding voice through verse. 42min · 2023</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Tribeca '23</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Official Selection</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="music" data-youtube="https://youtu.be/G0I2ZGQdN38">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/YD_Took_her_to-Jemo.jpg" alt="Echoes" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Music Video</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">ECHOES — "VOID"</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">One-take visual experiment in abandoned warehouse. Practical effects only. 4min · 2024</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">890K Views</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">MTV Push</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="narrative" style="transition-delay: 0.1s;" data-youtube="https://www.youtube.com/@DesignPlusThoughtPodcast">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/design+thought_podcast.png" alt="Corridor" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-neon-orange text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Podcast</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">CORRIDOR</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Two strangers. One hallway. A conversation that unravels everything. Single location thriller. 12min · 2023</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">SXSW '23</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Audience Award</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="reveal portfolio-card group cursor-pointer" data-category="commercial" style="transition-delay: 0.2s;" data-youtube="https://youtu.be/K5f1t6s4YV4">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/FinWise Ethiopia - Last-mile Capital for Inclusive Growth in Ethiopia.png" alt="Sony Alpha" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 z-10 bg-white text-dark-900 text-[9px] font-bold tracking-wider uppercase px-2.5 py-1">Commercial</div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+            <div class="flex items-center gap-2">
+              <i data-lucide="play-circle" class="w-5 h-5 text-neon-orange"></i>
+              <span class="text-xs font-bold text-white">Watch Film</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 p-4 space-y-1.5">
+          <h3 class="text-base font-bold tracking-tight text-white group-hover:text-neon-orange transition-colors">SONY ALPHA — SEE MORE</h3>
+          <p class="text-xs text-silver-dark leading-relaxed">Product launch film for α7R V. Macro + landscape showcase. 90sec · 2023</p>
+          <div class="flex items-center gap-3 pt-1">
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">1.1M Views</span>
+            <span class="w-1 h-1 rounded-full bg-silver-dark"></span>
+            <span class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">One Show Merit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Previous Work Button -->
+    <div class="flex justify-end mt-8">
+      <a href="work.html" class="cta-btn flex items-center gap-2 border border-neon-orange bg-transparent text-neon-orange px-6 py-3 text-sm font-bold tracking-wider uppercase hover:bg-neon-orange hover:text-dark-900 transition-all">
+        Previous Work
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="py-16 md:py-20 border-t border-white/5">
+  <div class="max-w-full mx-auto px-5">
+    <div class="grid lg:grid-cols-12 gap-6">
+      <!-- Left: Photo + Quick Info -->
+      <div class="lg:col-span-4 reveal">
+        <div class="relative overflow-hidden group">
+          <img src="assets/nza.png" alt="Niyan Ali" class="w-full aspect-[3/4] object-cover" style="filter: contrast(1.05) brightness(0.95);">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <div class="text-2xl font-black tracking-tight text-white">NIYAN ALI</div>
+            <div class="text-[10px] font-bold tracking-[0.2em] uppercase text-neon-orange mt-1">Director · Cinematographer · Editor</div>
+            <div class="flex gap-3 mt-3">
+              <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              </a>
+              <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 11v7"/><path d="M8 8h.01"/><path d="M12 18v-4a2 2 0 0 1 4 0v4"/><path d="M12 10h4"/></svg>
+              </a>
+              <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="Upwork">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M6 16v-7a4 4 0 0 1 8 0v1"/><path d="M10 13h4a2 2 0 0 1 0 4h-4v-4z"/><circle cx="16" cy="7" r="2"/></svg>
+              </a>
+              <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M23 3a10.9 10.9 0 0 1-3.14.86A4.48 4.48 0 0 0 22.43.37a9.05 9.05 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.5 0a4.52 4.52 0 0 0-4.41 5.6A12.84 12.84 0 0 1 1.64 1.13a4.48 4.48 0 0 0-.61 2.28A4.52 4.52 0 0 0 3.67 8.43a4.46 4.46 0 0 1-2.05-.57v.06A4.52 4.52 0 0 0 4.5 12.7a4.5 4.5 0 0 1-2.04.08A4.52 4.52 0 0 0 6.4 16.24a9.06 9.06 0 0 1-5.6 1.93A9.3 9.3 0 0 1 0 18.1 12.84 12.84 0 0 0 6.92 20.9c8.3 0 12.86-6.87 12.86-12.83v-.58A9.42 9.42 0 0 0 24 4.56z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Equipment Tags -->
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Davinci Resolve</span>
+          <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">After Effects</span>
+          <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Blender</span>
+          <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Fusion</span>
+          <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">BMPCC 6K</span>
+          <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Sony FX6</span>
+        </div>
+      </div>
+
+      <!-- Right: Bio + Timeline -->
+      <div class="lg:col-span-8 space-y-8">
+        <div class="reveal">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-8 h-[1px] bg-neon-orange"></div>
+            <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">About</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-black tracking-tighter text-white mb-5">THE PHILOSOPHY</h2>
+          <div class="space-y-3 text-sm text-silver-mid leading-relaxed">
+            <p>My process is lean by necessity, powerful by design. I shoot, direct, light, edit, color, and sound-design my own work. Not because I have to, but because I believe the soul of a film lives in its consistency of vision. One mind, one lens, one uncompromising standard.</p>
+            <p>I started making films with a stolen phone and a broken tripod back in 2016. No film school. No industry connections. No safety net. What I had wasn’t a roadmap. It was a fever an obsession with the way light hits a room and a stubborn, borderline violent refusal to make anything mediocre. While others were waiting for permission or the perfect budget, I was out in the dirt, learning how to make a cheap lens bleed emotion.</p>
+            <p>Halfway through my third year of university as a Computer Science student, I looked at the code on my screen and realized I was staring down the barrel of a lifetime I didn't want. A safe path, a predictable 9-to-5 desk job, a quiet corporate routine. I didn't want a secure office. I wanted to build worlds. So, I walked out. I dropped out of university not because it was hard, but because the hunger to do what I love was too loud to ignore. I traded steady algorithms for unpredictable art, risking everything to build a life dictated by my own eyes, not a corporate spreadsheet.</p>
+            <p>Eight years later, the scale has changed, but the hunger hasn't. I’ve directed campaigns for major brands that once felt entirely unreachable, screened work at festivals I used to watch from the cheap seats, and built a body of work that speaks louder than any institutional credential ever could. I went from surviving the frame to completely commanding it.</p>
+
+            <p>My process remains lean by necessity, powerful by design. I don’t just show up to direct—I shoot, light, edit, color, and sound-design my own work. Not out of ego, and not because I have to. I do it because I believe the soul of a film lives entirely in its consistency of vision. If the friction of the world doesn't make it onto the screen, it’s just content. But when you collapse the distance between the spark of an idea and the final master render, you get something else entirely.</p>
+            <span class="text-neon-orange font-medium"></span>One mind. One lens. One uncompromising standard. This isn’t a career—it’s an obsession.</span>
+          </div>
+        </div>
+
+
+<!-- Skills Grid -->
+        <div class="reveal">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tighter text-white mb-6">SKILLS & PROFICIENCIES</h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="scissors" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Video Editing</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Linear & Non-Linear</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="palette" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Color Grading</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">DaVinci Resolve</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="volume-2" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Audio Editing</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Mix & Master</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="sparkles" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">VFX & Motion</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Fusion + After Effects</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="layout" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Graphics Design</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Ads & Posters</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="clipboard-list" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Storyboarding</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Pre-Visualization</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="camera" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Cinematography</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Lighting & Composition</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="users" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Collaboration</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Communication & Empathy</div>
+            </div>
+            <div class="bg-dark-700/40 border border-white/5 p-4 hover:border-neon-orange/30 transition-all">
+              <i data-lucide="clock" class="w-5 h-5 text-neon-orange mb-2"></i>
+              <div class="text-xs font-bold text-white">Time Management</div>
+              <div class="text-[9px] text-silver-dark mt-0.5">Plan, Prioritize, Execute</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT / CTA SECTION -->
+<section id="contact" class="py-16 md:py-20 border-t border-white/5 relative overflow-hidden">
+  <!-- Background texture -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('https://picsum.photos/seed/texture-dark-cinema/1920/800.jpg'); background-size: cover; background-position: center;"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/95 to-dark-900"></div>
+
+  <div class="relative max-w-full mx-auto px-5">
+    <div class="grid lg:grid-cols-2 gap-10">
+      <!-- Left: CTA Text -->
+      <div class="reveal space-y-5 relative">
+        <!-- World Map Background - Left Side Only -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none -left-5 -top-5">
+          <img src="assets/world_map_eth_highlight.png" alt="World map background" class="w-full h-full object-cover">
+          <div class="absolute left-[42%] top-[45%] w-3 h-3 rounded-full bg-neon-orange shadow-[0_0_16px_rgba(255,79,48,0.8)]"></div>
+        </div>
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-8 h-[1px] bg-neon-orange"></div>
+          <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Let's Work</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-[0.9]">
+          GOT A STORY?<br>
+          <span class="text-neon-orange">LET'S SHOOT IT.</span>
+        </h2>
+        <p class="text-sm text-silver-mid leading-relaxed max-w-full">
+          Whether it's a brand film, music video, documentary, or narrative short — if the project excites me, I'll move mountains to make it happen. No project too small, no vision too ambitious.
+        </p>
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-3 text-sm">
+            <i data-lucide="mail" class="w-4 h-4 text-neon-orange"></i>
+            <span class="text-silver-mid">hello@niyanali.film</span>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <i data-lucide="phone" class="w-4 h-4 text-neon-orange"></i>
+            <span class="text-silver-mid">+1 (555) 924-7183</span>
+          </div>
+          <div class="flex items-center gap-3 text-sm">
+            <i data-lucide="map-pin" class="w-4 h-4 text-neon-orange"></i>
+            <span class="text-silver-mid">Los Angeles, CA — Available Worldwide</span>
+          </div>
+        </div>
+
+        <div class="bg-dark-700/60 border border-white/5 p-4 mt-6 max-w-full">
+          <div class="text-[10px] font-bold tracking-wider uppercase text-neon-orange mb-2">Current Availability</div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span class="text-xs text-white font-medium">Booking for Q2 2025</span>
+          </div>
+          <div class="w-full bg-dark-500 rounded-full h-1.5 mt-2">
+            <div class="bg-neon-orange h-1.5 rounded-full" style="width: 65%; animation: pulseGlow 2s infinite;"></div>
+          </div>
+          <div class="text-[9px] text-silver-dark mt-1.5">65% booked — 4 slots remaining</div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="reveal">
+        <form id="contactForm" class="bg-dark-700/50 border border-white/5 p-6 md:p-8 space-y-4">
+          <div class="text-lg font-bold tracking-tight text-white mb-2">Start a Conversation</div>
+          
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-[9px] font-bold tracking-wider uppercase text-silver-dark block mb-1.5">Name *</label>
+              <input type="text" required class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark focus:border-neon-orange focus:outline-none transition-colors" placeholder="Your name">
+            </div>
+            <div>
+              <label class="text-[9px] font-bold tracking-wider uppercase text-silver-dark block mb-1.5">Email *</label>
+              <input type="email" required class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark focus:border-neon-orange focus:outline-none transition-colors" placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-[9px] font-bold tracking-wider uppercase text-silver-dark block mb-1.5">Project Type *</label>
+            <select required class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:border-neon-orange focus:outline-none transition-colors appearance-none cursor-pointer">
+              <option value="">Select project type</option>
+              <option>Brand Film / Commercial</option>
+              <option>Music Video</option>
+              <option>Documentary</option>
+              <option>Narrative Short / Feature</option>
+              <option>Social Media Content</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-[9px] font-bold tracking-wider uppercase text-silver-dark block mb-1.5">Budget Range</label>
+              <select class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:border-neon-orange focus:outline-none transition-colors appearance-none cursor-pointer">
+                <option value="">Select range</option>
+                <option>$1K – $5K</option>
+                <option>$5K – $15K</option>
+                <option>$15K – $50K</option>
+                <option>$50K+</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[9px] font-bold tracking-wider uppercase text-silver-dark block mb-1.5">Timeline</label>
+              <select class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:border-neon-orange focus:outline-none transition-colors appearance-none cursor-pointer">
+                <option value="">Select timeline</option>
+                <option>ASAP</option>
+                <option>1–2 Months</option>
+                <option>3–6 Months</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="text-[9px] font-bold tracking-wider uppercase text-silver-dark block mb-1.5">Tell Me About Your Vision *</label>
+            <textarea required rows="4" class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark focus:border-neon-orange focus:outline-none transition-colors resize-none" placeholder="What's the story? Who's the audience? What does success look like?"></textarea>
+          </div>
+
+          <button type="submit" class="cta-btn w-full bg-neon-orange text-dark-900 py-4 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover transition-colors flex items-center justify-center gap-2">
+            Send Project Inquiry <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+
+          <div id="formMessage" class="hidden text-center text-sm font-medium py-2"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <div>
+          <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+          <span class="text-[10px] text-silver-dark ml-2">© 2025 All Rights Reserved</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="film" class="w-4 h-4"></i></a>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">
+        BUILT WITH OBSESSION · LA, CA
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- YouTube Configuration for index.html -->
+<script>
+// YouTube URLs Configuration
+const showreelYoutubeUrl = ''; // Showreel YouTube URL
+
+// Portfolio card click handlers for YouTube
+const indexCards = document.querySelectorAll('#work .portfolio-card');
+indexCards.forEach((card) => {
+  const videoUrl = card.getAttribute('data-youtube');
+  if (videoUrl && videoUrl.trim()) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+      window.location.href = videoUrl;
+    });
+  } else {
+    card.style.cursor = 'default';
+  }
+});
+
+// Showreel button - replace with YouTube when clicked
+const showreelPlaceholder = document.getElementById('showreelPlaceholder');
+if (showreelPlaceholder && showreelYoutubeUrl) {
+  showreelPlaceholder.addEventListener('click', () => {
+    window.location.href = showreelYoutubeUrl;
+  });
+}
+
+// Reinitialize Lucide icons
+if (typeof lucide !== 'undefined') {
+  lucide.createIcons();
+}
+</script>
+</html>
+
+

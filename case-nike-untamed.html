@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nike Untamed — Case Study | Niyan Ali</title>
+<link rel="icon" type="image/png" href="assets/nafavicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+    colors: {
+      neon: { orange: '#FF4F30', orangeHover: '#FF6A4D' },
+      silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+      dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+    }
+  }}
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay">
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/85 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-sm tracking-tighter">NA</div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/5 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Contact</a>
+  </div>
+</nav>
+
+<section class="pt-32 pb-16 border-b border-white/5 relative">
+  <div class="absolute left-0 top-0 bottom-0 w-[32px] film-strip opacity-30 hidden lg:block"></div>
+  <div class="max-w-4xl mx-auto px-5">
+    <a href="cases.html" class="inline-flex items-center gap-2 text-neon-orange text-sm font-bold mb-6 hover:gap-3 transition-all"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Cases</a>
+    <div class="space-y-4">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-8 h-[1px] bg-neon-orange"></div>
+        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Case Study</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-white">NIKE — UNTAMED</h1>
+      <p class="text-lg text-silver-mid max-w-3xl leading-relaxed">Global campaign, high stakes, one concise visual rhythm.</p>
+    </div>
+  </div>
+</section>
+<section class="py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="relative aspect-video overflow-hidden bg-dark-700">
+      <img src="https://picsum.photos/seed/case-nike-untamed-hero/1200/675.jpg" alt="Nike Untamed" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+    </div>
+  </div>
+</section>
+<section class="py-16">
+  <div class="max-w-3xl mx-auto px-5 space-y-12">
+    <div class="space-y-4">
+      <h2 class="text-3xl font-black tracking-tight text-white">The Brief</h2>
+      <p class="text-silver-mid leading-relaxed">Nike gave me one instruction: make every shot feel raw, athletic, and urgent. The shoot had 14 days, 3 continents, and one very small window to capture the energy of movement.</p>
+      <p class="text-silver-mid leading-relaxed">This case study is about how I turned that pressure into a coherent visual story using motion, contrast, and pacing.</p>
+    </div>
+    <div class="space-y-4">
+      <h2 class="text-3xl font-black tracking-tight text-white">How it Worked</h2>
+      <div class="space-y-3">
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Movement-first framing:</span> I built each shot around the athlete, then let the frame come alive through intentional camera movement.</p>
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Editing tempo:</span> The cut rhythm mirrored breath and impact — fast when the motion was explosive, slower when the athlete prepared.</p>
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Lighting choices:</span> High contrast, practical highlights, and strong shadow separation gave the campaign its cinematic edge.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">3</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Continents</div>
+      </div>
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">14</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Days</div>
+      </div>
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">60s</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Final Cut</div>
+      </div>
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">Nom</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Cannes Lions</div>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <h2 class="text-3xl font-black tracking-tight text-white">The Result</h2>
+      <div class="space-y-3">
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Coherence under pressure:</span> The campaign retained visual identity despite the complex logistics.</p>
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Impact through detail:</span> Micro-decisions in editing and lighting made the difference between impressive footage and iconic footage.</p>
+      </div>
+    </div>
+    <div class="bg-dark-700/40 border border-white/5 p-8 rounded-sm">
+      <p class="text-silver-mid mb-4">If you want cinematic movement that feels both raw and intentional, let's build it.</p>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-8 py-3 text-xs font-bold tracking-wider uppercase inline-flex items-center gap-2 hover:bg-neon-orangeHover">Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</section>
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+        <span class="text-[10px] text-silver-dark ml-2">© 2025</span>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">ZEMA STUDIOS · ADDIS ABABA, ETH</div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

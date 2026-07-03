@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABOUT — Niyan Ali</title>
+<link rel="icon" type="image/png" href="assets/nafavicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+      colors: {
+        neon: { orange: '#FF4F30', orangeHover: '#FF6A4D' },
+        silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+        dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay">
+
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/85 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-sm tracking-tighter">NA</div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/5 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Contact</a>
+  </div>
+</nav>
+
+
+
+
+
+<!-- PAGE HEADER -->
+<section class="pt-28 pb-12 border-b border-white/5 relative">
+  <div class="absolute left-0 top-0 bottom-0 w-[32px] film-strip opacity-30 hidden lg:block"></div>
+  <div class="max-w-full mx-auto px-5" style="animation: slideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
+    <div class="flex items-center gap-3 mb-2">
+      <div class="w-8 h-[1px] bg-neon-orange"></div>
+      <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">The Story Behind the Edits</span>
+    </div>
+    <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-white">ABOUT</h1>
+  </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section id="about" class="py-16 md:py-20 border-t border-white/5">
+  <div class="max-w-full mx-auto px-5">
+    <div class="grid lg:grid-cols-12 gap-6">
+      <!-- Left: Photo + Quick Info -->
+      <div class="lg:col-span-4 reveal">
+        <div class="sticky top-24 self-start space-y-4">
+          <div class="relative overflow-hidden group">
+            <img src="assets/nza.png" alt="Niyan Ali" class="w-full aspect-[3/4] object-cover" style="filter: contrast(1.05) brightness(0.95);">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <div class="text-2xl font-black tracking-tight text-white">NIYAN ALI</div>
+              <div class="text-[10px] font-bold tracking-[0.2em] uppercase text-neon-orange mt-1">Director · Cinematographer · Editor</div>
+              <div class="flex gap-3 mt-3">
+                <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 11v7"/><path d="M8 8h.01"/><path d="M12 18v-4a2 2 0 0 1 4 0v4"/><path d="M12 10h4"/></svg>
+                </a>
+                <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="Upwork">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M6 16v-7a4 4 0 0 1 8 0v1"/><path d="M10 13h4a2 2 0 0 1 0 4h-4v-4z"/><circle cx="16" cy="7" r="2"/></svg>
+                </a>
+                <a href="#" class="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid" aria-label="Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M23 3a10.9 10.9 0 0 1-3.14.86A4.48 4.48 0 0 0 22.43.37a9.05 9.05 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.5 0a4.52 4.52 0 0 0-4.41 5.6A12.84 12.84 0 0 1 1.64 1.13a4.48 4.48 0 0 0-.61 2.28A4.52 4.52 0 0 0 3.67 8.43a4.46 4.46 0 0 1-2.05-.57v.06A4.52 4.52 0 0 0 4.5 12.7a4.5 4.5 0 0 1-2.04.08A4.52 4.52 0 0 0 6.4 16.24a9.06 9.06 0 0 1-5.6 1.93A9.3 9.3 0 0 1 0 18.1 12.84 12.84 0 0 0 6.92 20.9c8.3 0 12.86-6.87 12.86-12.83v-.58A9.42 9.42 0 0 0 24 4.56z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 space-y-2">
+            <div class="text-[10px] font-bold tracking-[0.2em] uppercase text-silver-dark">Primary Tools</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">DaVinci Resolve</span>
+              <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Fusion</span>
+              <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">After Effects</span>
+              <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Premiere Pro</span>
+              <span class="equip-tag px-3 py-1.5 text-[9px] font-bold tracking-wider uppercase text-silver-mid">Pro Tools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Updated About Content -->
+      <div class="lg:col-span-8 space-y-8">
+        <div class="reveal">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tighter text-white mb-4">About Me</h2>
+          <ul class="list-disc ml-5 space-y-2 text-sm text-silver-mid leading-relaxed">
+            <li>I have experience in editing different genres and styles such as films & stills, commercial ads, podcasts, music videos, vlogs, tutorials, courses and more. And also I am a quick learner and willing to make a positive impact. I am confident that I have the right skills and attitude to be an asset to your company.</li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tighter text-white mb-4">Relevant Experience</h2>
+
+          <div class="relative">
+            <div class="hidden lg:block absolute inset-y-0 left-1/2 w-px bg-white/10"></div>
+            <div class="space-y-12">
+              <div class="relative lg:grid lg:grid-cols-12 lg:gap-6 lg:items-center">
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-800/70 border border-white/10 p-6 rounded-none">
+                    <div class="text-sm font-bold text-neon-orange">Founder</div>
+                    <div class="text-xs text-silver-dark">2018 — Zema Studios</div>
+                    <p class="text-sm text-silver-mid mt-3">As the Founder and Video Editor of Zema Studios, I built my personal brand from the ground up. I handle video editing, client relationships, creative direction, and brand strategy, establishing Zema Studios as a trusted name in the industry.</p>
+                    <div class="mt-3 text-sm text-silver-mid">
+                      <div class="font-bold text-white mb-1">Specializing in:</div>
+                      <ul class="list-disc ml-5 space-y-1">
+                        <li>Video Editing: Transforming raw footage into polished, engaging visual stories.</li>
+                        <li>Creative Direction: Leading conceptualization and execution to align with client vision.</li>
+                        <li>Brand Building: Developing and maintaining a strong personal brand.</li>
+                        <li>Client Management: Building long-term client relationships and ensuring satisfaction.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden lg:flex lg:col-span-2 lg:justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <div class="absolute inset-y-0 w-px bg-white/10"></div>
+                    <div class="relative z-10 w-5 h-5 rounded-full bg-neon-orange ring-4 ring-dark-900"></div>
+                  </div>
+                </div>
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-700/40 border border-white/5 p-6 rounded-none text-center">
+                    <img src="assets/zema_studios.png" alt="Zema Studios" class="mx-auto mb-4 w-full max-w-[260px] aspect-square object-cover rounded-none">
+                    <div class="text-sm text-silver-mid mt-4">Logo partnership and brand development, with an emphasis on premium visual storytelling.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative lg:grid lg:grid-cols-12 lg:gap-6 lg:items-center">
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-700/40 border border-white/5 p-6 rounded-none text-center">
+                    <img src="assets/teraki.png" alt="ART" class="mx-auto mb-4 w-full max-w-[260px] aspect-square object-cover rounded-none">
+                    <div class="text-sm text-silver-mid mt-4">All Right Technologies LLC.'s podcast and video series, with creative editing and production oversight.</div>
+                  </div>
+                </div>
+                <div class="hidden lg:flex lg:col-span-2 lg:justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <div class="absolute inset-y-0 w-px bg-white/10"></div>
+                    <div class="relative z-10 w-5 h-5 rounded-full bg-neon-orange ring-4 ring-dark-900"></div>
+                  </div>
+                </div>
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-800/70 border border-white/10 p-6 rounded-none">
+                    <div class="text-sm font-bold text-neon-orange">Videographer & Editor</div>
+                    <div class="text-xs text-silver-dark">2023 — 2024 — All Right Technologies LLC.</div>
+                    <p class="text-sm text-silver-mid mt-3">Managed podcast production from concept to final cut, producing more than 10 podcast episodes. Responsibilities included videography, production management, and high-quality editing to ensure a seamless viewing experience.</p>
+                    <div class="mt-3 text-sm text-silver-mid">
+                      <div class="font-bold text-white mb-1">Specializing in:</div>
+                      <ul class="list-disc ml-5 space-y-1">
+                        <li>Podcast Video Editing</li>
+                        <li>Production Management</li>
+                        <li>Videography</li>
+                        <li>Technical Expertise with professional gear and editing software</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative lg:grid lg:grid-cols-12 lg:gap-6 lg:items-center">
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-800/70 border border-white/10 p-6 rounded-none">
+                    <div class="text-sm font-bold text-neon-orange">Editor & Colorist</div>
+                    <div class="text-xs text-silver-dark">2024 — 2025 — THON Multimedia</div>
+                    <p class="text-sm text-silver-mid mt-3">Focused on transforming raw footage into captivating short films through precise editing and color grading. Worked closely with directors to enhance visual aesthetics and emotional tone.</p>
+                    <div class="mt-3 text-sm text-silver-mid">
+                      <div class="font-bold text-white mb-1">Specializing in:</div>
+                      <ul class="list-disc ml-5 space-y-1">
+                        <li>Film Editing</li>
+                        <li>Color Grading</li>
+                        <li>Creative Collaboration</li>
+                        <li>Technical Proficiency</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden lg:flex lg:col-span-2 lg:justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <div class="absolute inset-y-0 w-px bg-white/10"></div>
+                    <div class="relative z-10 w-5 h-5 rounded-full bg-neon-orange ring-4 ring-dark-900"></div>
+                  </div>
+                </div>
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-700/40 border border-white/5 p-6 rounded-none text-center">
+                    <img src="assets/thon_production.png" alt="THON" class="mx-auto mb-4 w-full max-w-[260px] aspect-square object-cover rounded-none">
+                    <div class="text-sm text-silver-mid mt-4">Story-driven editing and color work for short films and branded content.</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative lg:grid lg:grid-cols-12 lg:gap-6 lg:items-center">
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-700/40 border border-white/5 p-6 rounded-none text-center">
+                    <img src="assets/kape_production.png" alt="KAPE" class="mx-auto mb-4 w-full max-w-[260px] aspect-square object-cover rounded-none">
+                    <div class="text-sm text-silver-mid mt-4">Cinematic post-production with premium grading and editorial support for Kape Production.</div>
+                  </div>
+                </div>
+                <div class="hidden lg:flex lg:col-span-2 lg:justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <div class="absolute inset-y-0 w-px bg-white/10"></div>
+                    <div class="relative z-10 w-5 h-5 rounded-full bg-neon-orange ring-4 ring-dark-900"></div>
+                  </div>
+                </div>
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-800/70 border border-white/10 p-6 rounded-none">
+                    <div class="text-sm font-bold text-neon-orange">Editor & Colorist</div>
+                    <div class="text-xs text-silver-dark">2025 — Now — Kape Production</div>
+                    <p class="text-sm text-silver-mid mt-3">Shaping visually compelling and emotionally resonant stories from concept to final cut. Refining footage with cinematic color grading to elevate storytelling.</p>
+                    <div class="mt-3 text-sm text-silver-mid">
+                      <div class="font-bold text-white mb-1">Specialties include:</div>
+                      <ul class="list-disc ml-5 space-y-1">
+                        <li>Narrative Editing</li>
+                        <li>Cinematic Color Grading</li>
+                        <li>Creative Collaboration</li>
+                        <li>Post-Production Expertise (DaVinci Resolve, After Effects, Fusion)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative lg:grid lg:grid-cols-12 lg:gap-6 lg:items-center">
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-800/70 border border-white/10 p-6 rounded-none">
+                    <div class="text-sm font-bold text-neon-orange">Freelance Collaborations</div>
+                    <div class="text-xs text-silver-dark">2025 — Now — multiple clients</div>
+                    <p class="text-sm text-silver-mid mt-3">Worked with brands, creatives, and agencies on short films, promotional videos, and campaign content across diverse industries.</p>
+                    <div class="mt-3 text-sm text-silver-mid">
+                      <div class="font-bold text-white mb-1">Specializing in:</div>
+                      <ul class="list-disc ml-5 space-y-1">
+                        <li>Campaign Editing</li>
+                        <li>Brand Film Direction</li>
+                        <li>Visual Storytelling</li>
+                        <li>High-end Post Production</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden lg:flex lg:col-span-2 lg:justify-center">
+                  <div class="relative flex items-center justify-center">
+                    <div class="absolute inset-y-0 w-px bg-white/10"></div>
+                    <div class="relative z-10 w-5 h-5 rounded-full bg-neon-orange ring-4 ring-dark-900"></div>
+                  </div>
+                </div>
+                <div class="lg:col-span-5">
+                  <div class="bg-dark-700/40 border border-white/5 p-6 rounded-none text-center">
+                    <img src="assets/premium_plus_production_logo.png" alt="Brand" class="mx-auto mb-4 w-full max-w-[260px] aspect-square object-cover rounded-none">
+                    <div class="text-sm text-silver-mid mt-4">Partnered with a range of clients to deliver high-quality visuals with a strong commercial edge.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tighter text-white mb-4">Skills & Specialization</h2>
+          <div class="grid grid-cols-1 gap-4">
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Video Editing <span class="text-xs text-silver-dark skill-percent" data-target="98">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:98%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Color Grading <span class="text-xs text-silver-dark skill-percent" data-target="92">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:92%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Audio Editing <span class="text-xs text-silver-dark skill-percent" data-target="80">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:80%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Ads & Poster Designs <span class="text-xs text-silver-dark skill-percent" data-target="84">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:84%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Storyboarding <span class="text-xs text-silver-dark skill-percent" data-target="100">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:100%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Project Management <span class="text-xs text-silver-dark skill-percent" data-target="78">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:78%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Graphics Design <span class="text-xs text-silver-dark skill-percent" data-target="82">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:82%;"></div>
+              </div>
+            </div>
+            <div class="skill-bar bg-dark-700/40 border border-white/5 p-4 rounded-none">
+              <div class="flex items-center justify-between mb-3 text-sm font-bold text-white">Collaboration <span class="text-xs text-silver-dark skill-percent" data-target="86">0%</span></div>
+              <div class="h-2 bg-white/10 overflow-hidden rounded-full">
+                <div class="h-full bg-neon-orange skill-fill" style="--fill:86%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tighter text-white mb-4">Specialization & Tools</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-items-center">
+            <div class="tool-logo opacity-0 transform translate-y-6">
+              <img src="assets/DaVinci.png" alt="DaVinci Resolve" class="max-h-16 object-contain">
+            </div>
+            <div class="tool-logo opacity-0 transform translate-y-6">
+              <img src="assets/Fusion.png" alt="Fusion" class="max-h-16 object-contain">
+            </div>
+            <div class="tool-logo opacity-0 transform translate-y-6">
+              <img src="assets/After-Effects-Logo.png" alt="After Effects" class="max-h-16 object-contain">
+            </div>
+            <div class="tool-logo opacity-0 transform translate-y-6">
+              <img src="assets/Blender-Logo.png" alt="Blender" class="max-h-16 object-contain">
+            </div>
+          </div>
+        </div>
+        <div class="reveal bg-dark-900/60 border border-white/10 p-6 rounded-none">
+          <h2 class="text-2xl md:text-3xl font-black tracking-tighter text-white mb-4">Privacy Policy</h2>
+          <div class="space-y-4 text-sm text-silver-mid leading-relaxed">
+            <p>I also respect your ownership and control over your creative work. When you upload or create any content using my services, you retain all the rights to your work. I do not claim any ownership or license over your content, and I do not use it for any purposes other than delivering our services to you.</p>
+            <p>If you have any questions or concerns about my privacy policy, please contact my support team (AKA me). I appreciate your trust and confidence.</p>
+            <p>I value your privacy and respect your intellectual property rights. I am committed to protecting your personal information and ensuring that your creative work is secure and protected.</p>
+            <p>When you use my services, I may collect, store, and process some of your personal information. I use this information only to provide you with the best service possible, and I do not share it with any third parties without your consent.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+        <span class="text-[10px] text-silver-dark ml-2">© 2025</span>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">ZEMA STUDIOS · ADDIS ABABA, ETH</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

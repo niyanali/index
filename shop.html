@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOP — Niyan Ali</title>
+<link rel="icon" type="image/png" href="assets/nafavicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+      colors: {
+        neon: { orange: '#FF4F30', orangeHover: '#FF6A4D', orangeDark: '#CC3F26' },
+        silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+        dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+      }
+    }
+  }
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay scanline-overlay">
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/90 backdrop-blur-xl border-b border-white/10">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-sm tracking-tighter">NA</div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/10 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Contact</a>
+  </div>
+</nav>
+
+<section class="relative min-h-screen pt-28 pb-16 overflow-hidden">
+  <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/shop-hero/1600/1200.jpg')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-black/75"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,79,48,0.18),_transparent_35%)]"></div>
+  <div class="relative max-w-6xl mx-auto px-5 h-full flex items-center justify-center">
+    <div class="w-full max-w-4xl text-center space-y-8">
+      <div class="inline-flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.3em] text-neon-orange">
+        <span class="w-14 h-[1px] bg-neon-orange block"></span>SHOP / SOON
+      </div>
+      <h1 class="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-[0.9]">COMING SOON</h1>
+      <p class="mx-auto max-w-3xl text-lg md:text-xl text-silver-mid leading-relaxed">The shop is being built. Expect sharp filmmaker releases: LUT packs, premium assets, rentals and shop drops built for high-end storytellers.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] hover:bg-neon-orangeHover">Notify Me</a>
+        <a href="index.html" class="border border-white/10 text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] hover:border-neon-orange hover:text-neon-orange transition-all">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 border-t border-white/10 bg-dark-900/95">
+  <div class="max-w-5xl mx-auto px-5">
+    <div class="text-center mb-12">
+      <div class="text-[10px] uppercase tracking-[0.3em] text-neon-orange">FAQ</div>
+      <h2 class="text-4xl font-black text-white mt-4">Shop Questions</h2>
+      <p class="text-silver-mid mt-4">Everything is being prepared for launch. Here are the answers while the shop gets locked in.</p>
+    </div>
+    <div class="space-y-4">
+      <details class="group border border-white/10 bg-dark-800 p-6 rounded-none">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-white text-base font-bold tracking-[0.12em]">When does the shop open?<span class="text-neon-orange text-2xl">+</span></summary>
+        <p class="mt-4 text-sm text-silver-mid leading-relaxed">The launch date is coming soon. Join the notify list and you’ll get the first update when the shop goes live.</p>
+      </details>
+      <details class="group border border-white/10 bg-dark-800 p-6 rounded-none">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-white text-base font-bold tracking-[0.12em]">What will be available at launch?<span class="text-neon-orange text-2xl">+</span></summary>
+        <p class="mt-4 text-sm text-silver-mid leading-relaxed">Expect LUT collections, visual asset bundles, filmmaking kit rentals, and premium production tools built for bold storytellers.</p>
+      </details>
+      <details class="group border border-white/10 bg-dark-800 p-6 rounded-none">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-white text-base font-bold tracking-[0.12em]">Can I reserve a bundle now?<span class="text-neon-orange text-2xl">+</span></summary>
+        <p class="mt-4 text-sm text-silver-mid leading-relaxed">Reservations are not open yet, but early subscribers will be able to reserve first-release bundles when the shop opens.</p>
+      </details>
+      <details class="group border border-white/10 bg-dark-800 p-6 rounded-none">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-white text-base font-bold tracking-[0.12em]">Will there be rentals?<span class="text-neon-orange text-2xl">+</span></summary>
+        <p class="mt-4 text-sm text-silver-mid leading-relaxed">Yes, the shop will include filmmaker kit rentals. Production-ready gear, crew-ready packages, and fast booking options are coming soon.</p>
+      </details>
+      <details class="group border border-white/10 bg-dark-800 p-6 rounded-none">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-white text-base font-bold tracking-[0.12em]">How do I get launch updates?<span class="text-neon-orange text-2xl">+</span></summary>
+        <p class="mt-4 text-sm text-silver-mid leading-relaxed">Use the Notify Me button above or reach out via the contact page. This is the fastest way to secure early access.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+        <span class="text-[10px] text-silver-dark ml-2">© 2025</span>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">ZEMA STUDIOS · ADDIS ABABA, ETH</div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACT — Niyan Ali</title>
+<link rel="icon" type="image/png" href="assets/nafavicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+    colors: {
+      neon: { orange: '#FF4F30', orangeHover: '#FF6A4D' },
+      silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+      dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+    }
+  }}
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay">
+
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/85 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-sm tracking-tighter">NA</div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/5 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-white">Contact</a>
+  </div>
+</nav>
+
+
+
+
+
+<!-- ETHIOPIA MAP HEADER -->
+<section class="pt-28 pb-10 border-b border-white/5 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.06]">
+    <svg viewBox="0 0 1000 500" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#A0A0A0" stroke-width="0.5">
+        <path d="M120,80 L200,60 L280,70 L300,100 L280,140 L250,180 L220,200 L180,220 L150,200 L130,160 L110,120 Z"/>
+        <path d="M200,240 L230,230 L260,250 L270,300 L260,350 L240,400 L220,420 L200,400 L190,350 L185,300 Z"/>
+        <path d="M430,70 L470,60 L510,70 L520,100 L500,120 L470,130 L440,120 L420,100 Z"/>
+        <path d="M440,160 L480,150 L520,160 L540,200 L550,250 L540,300 L520,350 L500,380 L470,390 L450,370 L440,330 L430,280 L425,230 L430,190 Z"/>
+        <path d="M540,50 L620,40 L700,50 L780,70 L820,100 L830,140 L800,180 L760,200 L720,210 L680,200 L640,180 L600,150 L560,120 L540,90 Z"/>
+        <path d="M760,300 L810,290 L850,310 L860,340 L840,370 L800,380 L770,360 L755,330 Z"/>
+      </g>
+      <g class="ethiopia-glow">
+        <path d="M478,220 L490,215 L502,218 L510,225 L515,238 L512,252 L505,262 L495,268 L485,265 L478,255 L475,242 L476,230 Z" fill="rgba(255,79,48,0.6)" stroke="#FF4F30" stroke-width="1.5"/>
+        <circle cx="495" cy="242" r="4" fill="#FF4F30"/>
+        <circle cx="495" cy="242" r="8" fill="none" stroke="#FF4F30" stroke-width="0.5" opacity="0.5"/>
+        <circle cx="495" cy="242" r="14" fill="none" stroke="#FF4F30" stroke-width="0.3" opacity="0.3"/>
+      </g>
+    </svg>
+  </div>
+  <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/70 to-dark-900/40"></div>
+  <div class="absolute left-0 top-0 bottom-0 w-[32px] film-strip opacity-30 hidden lg:block"></div>
+
+  <div class="relative max-w-full mx-auto px-5 text-center" style="animation: slideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
+    <div class="flex items-center justify-center gap-3 mb-3">
+      <div class="w-8 h-[1px] bg-neon-orange"></div>
+      <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Let's Work</span>
+      <div class="w-8 h-[1px] bg-neon-orange"></div>
+    </div>
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter text-white leading-[0.9]">
+      GOT A STORY?<br>
+      <span class="text-neon-orange">LET'S CUT IT.</span>
+    </h1>
+    <p class="text-sm text-silver-mid mt-4 max-w-full mx-auto leading-relaxed">
+      Based in Addis Ababa, Ethiopia. Available for freelance work worldwide.
+    </p>
+  </div>
+</section>
+
+<!-- MAIN CONTACT SECTION: LEFT INFO + RIGHT FORM -->
+<section class="py-12 md:py-16">
+  <div class="max-w-full mx-auto px-5">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+      <!-- ========== LEFT COLUMN: INFO ========== -->
+      <div class="reveal space-y-6">
+        <!-- Description -->
+        <div class="space-y-4">
+          <p class="text-sm text-silver-mid leading-relaxed">
+            I partner with brands, artists, and organizations to create engaging and impactful stories that resonate with audiences. Whether it's a short film, music video, podcast, commercial, or social media content — I bring the same level of craft and obsession to every project.
+          </p>
+          <p class="text-sm text-silver-mid leading-relaxed">
+            I'm eager to learn from every collaboration, ready to work hard, and committed to making a positive impact on your vision. If the project excites me, I'll move mountains to make it happen.
+          </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full h-[1px] bg-white/5"></div>
+
+        <!-- Contact Details -->
+        <div class="space-y-5">
+          <!-- Email -->
+          <a href="mailto:notniyansemailaddress@gmail.com" class="info-row flex items-start gap-4 group">
+            <div class="info-icon w-11 h-11 bg-dark-700 border border-white/5 flex items-center justify-center flex-shrink-0 transition-all">
+              <i data-lucide="mail" class="w-4 h-4 text-neon-orange"></i>
+            </div>
+            <div class="pt-1">
+              <div class="info-label text-[9px] font-bold tracking-[0.2em] uppercase text-silver-dark transition-colors">Email</div>
+              <div class="info-value text-sm text-silver-mid transition-colors mt-0.5">notniyansemailaddress@gmail.com</div>
+            </div>
+          </a>
+
+          <!-- Phone Primary -->
+          <a href="tel:+251910303863" class="info-row flex items-start gap-4 group">
+            <div class="info-icon w-11 h-11 bg-dark-700 border border-white/5 flex items-center justify-center flex-shrink-0 transition-all">
+              <i data-lucide="phone" class="w-4 h-4 text-neon-orange"></i>
+            </div>
+            <div class="pt-1">
+              <div class="info-label text-[9px] font-bold tracking-[0.2em] uppercase text-silver-dark transition-colors">Phone (Primary)</div>
+              <div class="info-value text-sm text-silver-mid transition-colors mt-0.5">+251 91 030 3863</div>
+            </div>
+          </a>
+
+          <!-- Phone Alt -->
+          <a href="tel:+251908885388" class="info-row flex items-start gap-4 group">
+            <div class="info-icon w-11 h-11 bg-dark-700 border border-white/5 flex items-center justify-center flex-shrink-0 transition-all">
+              <i data-lucide="phone" class="w-4 h-4 text-neon-orange"></i>
+            </div>
+            <div class="pt-1">
+              <div class="info-label text-[9px] font-bold tracking-[0.2em] uppercase text-silver-dark transition-colors">Phone (Alternative)</div>
+              <div class="info-value text-sm text-silver-mid transition-colors mt-0.5">+251 90 888 5388</div>
+            </div>
+          </a>
+
+          <!-- Location -->
+          <div class="info-row flex items-start gap-4">
+            <div class="info-icon w-11 h-11 bg-dark-700 border border-white/5 flex items-center justify-center flex-shrink-0 transition-all">
+              <i data-lucide="map-pin" class="w-4 h-4 text-neon-orange"></i>
+            </div>
+            <div class="pt-1">
+              <div class="info-label text-[9px] font-bold tracking-[0.2em] uppercase text-silver-dark transition-colors">Location</div>
+              <div class="info-value text-sm text-silver-mid transition-colors mt-0.5">RRV 140, Addis Ababa, Ethiopia</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full h-[1px] bg-white/5"></div>
+
+        <!-- Availability Card -->
+        <div class="bg-dark-700/50 border border-white/5 p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-[10px] font-bold tracking-[0.2em] uppercase text-neon-orange">Current Availability</div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <span class="text-[10px] font-bold tracking-wider uppercase text-white">Booking for Q2 2025</span>
+            </div>
+          </div>
+          <div class="w-full bg-dark-500 rounded-full h-1.5">
+            <div class="bg-neon-orange h-1.5 rounded-full" style="width: 40%; animation: pulseGlow 2s infinite;"></div>
+          </div>
+          <div class="text-[9px] text-silver-dark">~40% booked — good availability for new projects</div>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <div class="text-[10px] font-bold tracking-[0.2em] uppercase text-silver-dark mb-3">Connect With Me</div>
+          <div class="flex gap-3">
+            <a href="#" class="w-10 h-10 bg-dark-700 border border-white/5 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-dark-700 border border-white/5 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-dark-700 border border-white/5 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-dark-700 border border-white/5 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-dark-700 border border-white/5 flex items-center justify-center hover:border-neon-orange hover:text-neon-orange transition-all text-silver-mid">
+              <i data-lucide="film" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== RIGHT COLUMN: FORM ========== -->
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <form id="contactForm" class="bg-dark-700/40 border border-white/5 p-6 md:p-8 space-y-5">
+          <!-- Form Header -->
+          <div class="space-y-1">
+            <div class="text-lg font-bold tracking-tight text-white">Start a Conversation</div>
+            <div class="text-[10px] text-silver-dark tracking-wider">Fill out the form below and I'll get back to you within 24 hours.</div>
+          </div>
+
+          <!-- Name + Email Row -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="form-label">Name *</label>
+              <input type="text" required
+                class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark/60 focus:outline-none transition-all"
+                placeholder="Your name">
+            </div>
+            <div>
+              <label class="form-label">Email *</label>
+              <input type="email" required
+                class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark/60 focus:outline-none transition-all"
+                placeholder="your@email.com">
+            </div>
+          </div>
+
+          <!-- Project Type -->
+          <div>
+            <label class="form-label">Project Type *</label>
+            <select required
+              class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:outline-none transition-all appearance-none cursor-pointer">
+              <option value="">Select project type</option>
+              <option>Short Film / Narrative</option>
+              <option>Music Video</option>
+              <option>Podcast Production</option>
+              <option>Commercial / Brand Film</option>
+              <option>Documentary</option>
+              <option>Social Media Content</option>
+              <option>Color Grading Only</option>
+              <option>Video Editing Only</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Budget + Timeline Row -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="form-label">Budget Range</label>
+              <select
+                class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:outline-none transition-all appearance-none cursor-pointer">
+                <option value="">Select range</option>
+                <option>Under 5,000 ETB</option>
+                <option>5,000 – 15,000 ETB</option>
+                <option>15,000 – 50,000 ETB</option>
+                <option>50,000 – 100,000 ETB</option>
+                <option>100,000+ ETB</option>
+                <option>Negotiable</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Timeline</label>
+              <select
+                class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:outline-none transition-all appearance-none cursor-pointer">
+                <option value="">Select timeline</option>
+                <option>ASAP / Rush</option>
+                <option>Within 1 Week</option>
+                <option>1 – 2 Weeks</option>
+                <option>1 – 2 Months</option>
+                <option>Flexible / No Rush</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Vision Description -->
+          <div>
+            <label class="form-label">Tell Me About Your Vision *</label>
+            <textarea required rows="5"
+              class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark/60 focus:outline-none transition-all resize-none"
+              placeholder="What's the story? Who's the audience? What does the final product look like in your head? The more detail, the better I can understand your vision."></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn"
+            class="cta-btn w-full bg-neon-orange text-dark-900 py-4 text-xs font-bold tracking-[0.15em] uppercase hover:bg-neon-orangeHover transition-colors flex items-center justify-center gap-2.5">
+            <span id="btnText">Send Project Inquiry</span>
+            <i data-lucide="arrow-right" class="w-4 h-4" id="btnIcon"></i>
+            <svg id="btnSpinner" class="hidden animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/>
+            </svg>
+          </button>
+
+          <!-- Form Message -->
+          <div id="formMessage" class="hidden text-center text-sm font-medium py-2 rounded-sm"></div>
+
+          <!-- Privacy Note -->
+          <div class="flex items-start gap-2 pt-1">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-silver-dark flex-shrink-0 mt-0.5"></i>
+            <p class="text-[9px] text-silver-dark leading-relaxed">
+              Your information is kept strictly confidential. I do not share your details with any third parties. 
+              You retain full ownership and rights to all content you share with me. 
+              <a href="#" class="text-silver-mid hover:text-neon-orange underline underline-offset-2 transition-colors">Privacy Policy</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <div>
+          <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+          <span class="text-[10px] text-silver-dark ml-2">© 2025 All Rights Reserved</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        <a href="#" class="text-silver-dark hover:text-neon-orange transition-colors"><i data-lucide="film" class="w-4 h-4"></i></a>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">
+        ZEMA STUDIOS · ADDIS ABABA, ETH
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+

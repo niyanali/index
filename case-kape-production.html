@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kape Production — Case Study | Niyan Ali</title>
+<link rel="icon" type="image/png" href="assets/nafavicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { 'inter': ['Inter', 'sans-serif'] },
+    colors: {
+      neon: { orange: '#FF4F30', orangeHover: '#FF6A4D' },
+      silver: { light: '#E8E8E8', mid: '#A0A0A0', dark: '#6B6B6B' },
+      dark: { 900: '#050505', 800: '#0A0A0A', 700: '#111111', 600: '#1A1A1A', 500: '#222222' }
+    }
+  }}
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="grain-overlay">
+<!-- NAVIGATION -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-dark-900/85 backdrop-blur-xl border-b border-white/5">
+  <div class="max-w-full mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-sm tracking-tighter">NA</div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-bold tracking-tight text-white leading-none">NIYAN ALI</div>
+        <div class="text-[10px] font-medium tracking-[0.2em] text-silver-dark uppercase">Filmmaker</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="work.html" class="nav-link text-xs font-medium tracking-wider uppercase text-white">Work</a>
+      <a href="about.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">About</a>
+      <a href="cases.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Cases</a>
+      <a href="shop.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Shop</a>
+      <a href="contact.html" class="nav-link text-xs font-medium tracking-wider uppercase text-silver-mid hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-1.5 text-[10px] text-silver-dark tracking-wider uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        <span id="addisAbabaTime">--:-- ADDIS ABABA, ET</span>
+      </div>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-5 py-2.5 text-xs font-bold tracking-wider uppercase hover:bg-neon-orangeHover hidden sm:inline-flex">Get in Touch</a>
+      <button id="mobileMenuBtn" class="md:hidden text-white p-1.5"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-dark-800/95 backdrop-blur-xl border-t border-white/5 px-5 py-5 space-y-4">
+    <a href="work.html" class="block text-sm font-medium tracking-wider uppercase text-white">Work</a>
+    <a href="about.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">About</a>
+    <a href="cases.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Cases</a>
+    <a href="shop.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Shop</a>
+    <a href="contact.html" class="block text-sm font-medium tracking-wider uppercase text-silver-mid hover:text-white">Contact</a>
+  </div>
+</nav>
+
+<section class="pt-32 pb-16 border-b border-white/5 relative">
+  <div class="absolute left-0 top-0 bottom-0 w-[32px] film-strip opacity-30 hidden lg:block"></div>
+  <div class="max-w-4xl mx-auto px-5">
+    <a href="cases.html" class="inline-flex items-center gap-2 text-neon-orange text-sm font-bold mb-6 hover:gap-3 transition-all"><i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Cases</a>
+    <div class="space-y-4">
+      <div class="flex items-center gap-3 mb-2">
+        <div class="w-8 h-[1px] bg-neon-orange"></div>
+        <span class="text-[10px] font-bold tracking-[0.25em] uppercase text-neon-orange">Case Study</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-white">KAPE PRODUCTION</h1>
+      <p class="text-lg text-silver-mid max-w-3xl leading-relaxed">Creative collaboration at a new level — narrative filmmaking with the precision of craft.</p>
+    </div>
+  </div>
+</section>
+<section class="py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="relative aspect-video overflow-hidden bg-dark-700">
+      <img src="https://picsum.photos/seed/case-kape-production-hero/1200/675.jpg" alt="Kape Production" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+    </div>
+  </div>
+</section>
+<section class="py-16">
+  <div class="max-w-3xl mx-auto px-5 space-y-12">
+    <div class="space-y-4">
+      <h2 class="text-3xl font-black tracking-tight text-white">The Creative Leap</h2>
+      <p class="text-silver-mid leading-relaxed">Kape Production demanded more than execution — it demanded co-creation. This case study is about working at the intersection of direction, editing, and visual storytelling to bring ambitious narrative work to life.</p>
+      <p class="text-silver-mid leading-relaxed">The film required precision in every department. When the edit, grade, and sound design are this tightly aligned, the film starts to feel inevitable.</p>
+    </div>
+    <div class="space-y-4">
+      <h2 class="text-3xl font-black tracking-tight text-white">How it Worked</h2>
+      <div class="space-y-3">
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Narrative Editing:</span> Cuts were guided by emotional rhythm, not just coverage. Each beat had to land precisely.</p>
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Visual Language:</span> I built a consistent palette and camera style that supported the story without overpowering it.</p>
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Collaboration:</span> I worked alongside directors from pre-production through finish to ensure every choice served the story.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">New</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Level</div>
+      </div>
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">Collab</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">With Directors</div>
+      </div>
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">Cert</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Recognition</div>
+      </div>
+      <div class="bg-dark-700/40 border border-white/5 p-6 text-center space-y-2">
+        <div class="text-3xl font-black text-neon-orange">2025</div>
+        <div class="text-[9px] font-bold tracking-wider uppercase text-silver-dark">Film Coming</div>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <h2 class="text-3xl font-black tracking-tight text-white">The Result</h2>
+      <div class="space-y-3">
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Precision delivers confidence:</span> The film was sharper because every edit decision was intentional.</p>
+        <p class="text-silver-mid leading-relaxed"><span class="text-neon-orange font-bold">Creative systems matter:</span> Having workflows that support narrative complexity makes big productions easier, not harder.</p>
+      </div>
+    </div>
+    <div class="bg-dark-700/40 border border-white/5 p-8 rounded-sm">
+      <p class="text-silver-mid mb-4">Want to build your next narrative project with the same level of craft? Let’s connect.</p>
+      <a href="contact.html" class="cta-btn bg-neon-orange text-dark-900 px-8 py-3 text-xs font-bold tracking-wider uppercase inline-flex items-center gap-2 hover:bg-neon-orangeHover">Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</section>
+<footer class="border-t border-white/5 py-8">
+  <div class="max-w-full mx-auto px-5">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-sm bg-neon-orange flex items-center justify-center font-black text-dark-900 text-[10px] tracking-tighter">NA</div>
+        <span class="text-xs font-bold tracking-tight text-white">NIYAN ALI</span>
+        <span class="text-[10px] text-silver-dark ml-2">© 2025</span>
+      </div>
+      <div class="text-[9px] font-mono text-silver-dark tracking-wider">ZEMA STUDIOS · ADDIS ABABA, ETH</div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
