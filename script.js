@@ -116,7 +116,7 @@ workCards.forEach((card) => {
 // Contact Form (guarded — some pages don't have the form)
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
-const FORM_ENDPOINT = 'https://formspree.io/f/your-form-id';
+const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
@@ -132,20 +132,26 @@ if (contactForm) {
     try {
       const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json'
-        },
         body: new FormData(contactForm)
       });
 
+      let responseData = null;
+      try {
+        responseData = await response.json();
+      } catch (err) {
+        responseData = null;
+      }
+
       if (!response.ok) {
-        throw new Error('Submission failed');
+        const errorMessage = responseData?.message || responseData?.error || `Submission failed (${response.status})`;
+        console.error('Web3Forms submission error:', response.status, responseData);
+        throw new Error(errorMessage);
       }
 
       if (formMessage) {
         formMessage.classList.remove('hidden');
         formMessage.className = 'text-center text-sm font-medium py-2 text-green-400';
-        formMessage.textContent = '✓ Message sent successfully. I\'ll get back to you within 24 hours.';
+        formMessage.textContent = '✓ Thank you for your submission. I will get back to you in 24 hours.';
       }
 
       contactForm.reset();

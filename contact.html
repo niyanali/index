@@ -212,7 +212,10 @@ tailwind.config = {
 
       <!-- ========== RIGHT COLUMN: FORM ========== -->
       <div class="reveal" style="transition-delay: 0.15s;">
-        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" class="bg-dark-700/40 border border-white/5 p-6 md:p-8 space-y-5">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="bg-dark-700/40 border border-white/5 p-6 md:p-8 space-y-5">
+          <input type="hidden" name="access_key" value="4c71c505-9ace-42ea-b20e-abfbd3dc751f">
+          <input type="hidden" name="subject" value="New inquiry from portfolio site">
+          <input type="hidden" name="source" value="portfolio-website">
           <!-- Form Header -->
           <div class="space-y-1">
             <div class="text-lg font-bold tracking-tight text-white">Start a Conversation</div>

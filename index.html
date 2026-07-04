@@ -620,7 +620,10 @@ tailwind.config = {
 
       <!-- Right: Contact Form -->
       <div class="reveal">
-        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" class="bg-dark-700/50 border border-white/5 p-6 md:p-8 space-y-4">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="bg-dark-700/50 border border-white/5 p-6 md:p-8 space-y-4">
+          <input type="hidden" name="access_key" value="4c71c505-9ace-42ea-b20e-abfbd3dc751f">
+          <input type="hidden" name="subject" value="New inquiry from portfolio site">
+          <input type="hidden" name="source" value="portfolio-website">
           <div class="text-lg font-bold tracking-tight text-white mb-2">Start a Conversation</div>
           
           <div class="grid sm:grid-cols-2 gap-4">
