@@ -212,7 +212,7 @@ tailwind.config = {
 
       <!-- ========== RIGHT COLUMN: FORM ========== -->
       <div class="reveal" style="transition-delay: 0.15s;">
-        <form id="contactForm" class="bg-dark-700/40 border border-white/5 p-6 md:p-8 space-y-5">
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" class="bg-dark-700/40 border border-white/5 p-6 md:p-8 space-y-5">
           <!-- Form Header -->
           <div class="space-y-1">
             <div class="text-lg font-bold tracking-tight text-white">Start a Conversation</div>
@@ -223,13 +223,13 @@ tailwind.config = {
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label class="form-label">Name *</label>
-              <input type="text" required
+              <input type="text" name="name" required
                 class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark/60 focus:outline-none transition-all"
                 placeholder="Your name">
             </div>
             <div>
               <label class="form-label">Email *</label>
-              <input type="email" required
+              <input type="email" name="email" required
                 class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark/60 focus:outline-none transition-all"
                 placeholder="your@email.com">
             </div>
@@ -238,7 +238,7 @@ tailwind.config = {
           <!-- Project Type -->
           <div>
             <label class="form-label">Project Type *</label>
-            <select required
+            <select name="projectType" required
               class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:outline-none transition-all appearance-none cursor-pointer">
               <option value="">Select project type</option>
               <option>Short Film / Narrative</option>
@@ -257,7 +257,7 @@ tailwind.config = {
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label class="form-label">Budget Range</label>
-              <select
+              <select name="budget"
                 class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:outline-none transition-all appearance-none cursor-pointer">
                 <option value="">Select range</option>
                 <option>Under 5,000 ETB</option>
@@ -270,7 +270,7 @@ tailwind.config = {
             </div>
             <div>
               <label class="form-label">Timeline</label>
-              <select
+              <select name="timeline"
                 class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-silver-mid focus:outline-none transition-all appearance-none cursor-pointer">
                 <option value="">Select timeline</option>
                 <option>ASAP / Rush</option>
@@ -285,7 +285,7 @@ tailwind.config = {
           <!-- Vision Description -->
           <div>
             <label class="form-label">Tell Me About Your Vision *</label>
-            <textarea required rows="5"
+            <textarea name="message" required rows="5"
               class="w-full bg-dark-600 border border-white/10 px-4 py-3 text-sm text-white placeholder-silver-dark/60 focus:outline-none transition-all resize-none"
               placeholder="What's the story? Who's the audience? What does the final product look like in your head? The more detail, the better I can understand your vision."></textarea>
           </div>
@@ -301,7 +301,7 @@ tailwind.config = {
           </button>
 
           <!-- Form Message -->
-          <div id="formMessage" class="hidden text-center text-sm font-medium py-2 rounded-sm"></div>
+          <div id="formMessage" class="hidden text-center text-sm font-medium py-2 rounded-sm" aria-live="polite"></div>
 
           <!-- Privacy Note -->
           <div class="flex items-start gap-2 pt-1">

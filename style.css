@@ -67,6 +67,25 @@ body { font-family: 'Inter', sans-serif; background: #050505; color: #E8E8E8; ov
   z-index: 9998;
 }
 
+/* Editing Workflow styles (extracted from inline in index.html) */
+.editing-steps{display:flex;gap:12px;align-items:center;justify-content:space-between}
+@media(max-width:768px){.editing-steps{overflow-x:auto;padding-bottom:6px;gap:10px}}
+.step-item{flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:14px;transform:translateY(18px) scale(.98);opacity:0}
+.step-item .icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,0.02);box-shadow:0 6px 18px rgba(0,0,0,0.5);font-size:22px}
+.editing-steps .arrow{width:28px;color:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex:0 0 28px}
+.play-steps .step-item{opacity:1;transform:translateY(0) scale(1);animation:stepPop 620ms cubic-bezier(.2,.9,.3,1) both}
+.play-steps .step-item:nth-child(1){animation-delay:0ms}
+.play-steps .step-item:nth-child(2){animation-delay:110ms}
+.play-steps .step-item:nth-child(3){animation-delay:220ms}
+.play-steps .step-item:nth-child(4){animation-delay:330ms}
+.play-steps .step-item:nth-child(5){animation-delay:440ms}
+.play-steps .step-item:nth-child(6){animation-delay:550ms}
+.play-steps .step-item:nth-child(7){animation-delay:660ms}
+@keyframes stepPop{0%{transform:translateY(18px) scale(.96)}60%{transform:translateY(-8px) scale(1.06)}100%{transform:translateY(0) scale(1)}}
+.rocket{transition:transform 900ms cubic-bezier(.2,.9,.3,1)}
+.play-steps .rocket{transform:translateY(-10px) rotate(-6deg);filter:drop-shadow(0 10px 28px rgba(255,110,70,0.08))}
+
+
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
@@ -146,7 +165,9 @@ body { font-family: 'Inter', sans-serif; background: #050505; color: #E8E8E8; ov
   background: #FF4F30;
   transition: width 0.3s;
 }
-.nav-link:hover::after { width: 100%; }
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: #FF4F30; }
 
 .equip-tag {
   border: 1px solid rgba(255,79,48,0.3);
@@ -164,6 +185,14 @@ body { font-family: 'Inter', sans-serif; background: #050505; color: #E8E8E8; ov
 }
 .reveal.visible .skill-fill {
   width: var(--fill);
+}
+.w-1.h-1.rounded-full.bg-silver-dark {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(255,79,48,0.25);
+}
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.3); opacity: 1; }
 }
 
 .tool-logo {

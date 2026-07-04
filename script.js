@@ -29,6 +29,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 const skillCounters = document.querySelectorAll('.skill-percent');
+const skillFills = document.querySelectorAll('.skill-fill');
 const skillBarObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -47,6 +48,14 @@ const skillBarObserver = new IntersectionObserver((entries, observer) => {
 
         requestAnimationFrame(animateValue);
       });
+
+      skillFills.forEach(fill => {
+        const rawFill = fill.style.getPropertyValue('--fill') || getComputedStyle(fill).getPropertyValue('--fill');
+        if (rawFill) {
+          fill.style.width = rawFill.trim();
+        }
+      });
+
       observer.disconnect();
     }
   });
@@ -82,26 +91,55 @@ categoryBtns.forEach(btn => {
   });
 });
 
+// Portfolio card click behavior (prefer native anchors; attach handlers only to non-anchor cards)
+const workCards = document.querySelectorAll('#work .portfolio-card');
+workCards.forEach((card) => {
+  // If this card is an anchor, let the browser handle the click via href + target
+  if (card.tagName.toLowerCase() === 'a') {
+    // ensure safe attributes exist
+    if (!card.hasAttribute('target')) card.setAttribute('target', '_blank');
+    if (!card.hasAttribute('rel')) card.setAttribute('rel', 'noopener noreferrer');
+    return;
+  }
+
+  const videoUrl = card.getAttribute('data-youtube');
+  if (videoUrl && videoUrl.trim()) {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (event) => {
+      window.open(videoUrl, '_blank', 'noopener,noreferrer');
+    });
+  } else {
+    card.style.cursor = 'default';
+  }
+});
+
 // Contact Form (guarded — some pages don't have the form)
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
+const FORM_ENDPOINT = 'https://formspree.io/f/your-form-id';
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
+    const originalButtonHtml = btn ? btn.innerHTML : '';
+
     if (btn) {
       btn.innerHTML = '<svg class="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg> Sending...';
       btn.disabled = true;
     }
 
-    setTimeout(() => {
-      if (btn) {
-        btn.innerHTML = 'Send Project Inquiry <i data-lucide="arrow-right" class="w-4 h-4"></i>';
-        btn.disabled = false;
-      }
-      if (typeof lucide !== 'undefined' && lucide && typeof lucide.createIcons === 'function') {
-        lucide.createIcons();
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: new FormData(contactForm)
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed');
       }
 
       if (formMessage) {
@@ -111,13 +149,27 @@ if (contactForm) {
       }
 
       contactForm.reset();
+    } catch (error) {
+      if (formMessage) {
+        formMessage.classList.remove('hidden');
+        formMessage.className = 'text-center text-sm font-medium py-2 text-red-400';
+        formMessage.textContent = '⚠ Unable to send right now. Please try again later or email me directly.';
+      }
+    } finally {
+      if (btn) {
+        btn.innerHTML = originalButtonHtml;
+        btn.disabled = false;
+      }
+      if (typeof lucide !== 'undefined' && lucide && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
 
       if (formMessage) {
         setTimeout(() => {
           formMessage.classList.add('hidden');
         }, 5000);
       }
-    }, 2000);
+    }
   });
 }
 
@@ -130,6 +182,18 @@ window.addEventListener('scroll', () => {
     nav.style.borderBottomColor = 'rgba(255,255,255,0.03)';
   }
 });
+
+// Highlight current page nav link by default
+(function() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = link.getAttribute('href');
+    const linkPage = href.split('/').pop();
+    if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+      link.classList.add('active');
+    }
+  });
+})();
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -157,6 +221,21 @@ if (showreelPlaceholder) {
     showreelPlaceholder.replaceWith(iframe);
   });
 }
+
+// Editing Workflow IntersectionObserver (triggers the pop animation)
+(function(){
+  const container = document.getElementById('editingSteps');
+  if(!container) return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('play-steps');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.18});
+  io.observe(container);
+})();
 
 // Addis Ababa Real-time Clock
 const addisAbabaTimeElement = document.getElementById('addisAbabaTime');
